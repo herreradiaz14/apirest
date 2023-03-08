@@ -1,0 +1,25 @@
+<h1 style="text-align:center">
+  Inicio de sesión
+</h1>
+<div class="login">
+  <h2 class="login-header">Ingrese su usuario y contraseña</h2>
+  <form [formGroup]="authForm" class="login-container" (ngSubmit)="signIn()">
+    <p>
+      <input type="text" placeholder="Usuario" [(ngModel)]="username" formControlName="username">
+    </p>
+    <p>
+      <input type="password" placeholder="Contraseña" [(ngModel)]="password" formControlName="password">
+    </p>
+    <p>
+      <code>
+        Para iniciar sesión con un usuario, debe hacerlo siguiendo esta nomenclatura: <br>
+        <strong>Usuario: </strong> desde "username 1 al username 50"<br>
+        <strong>Contraseña: </strong> desde "password 1 al password 50"<br>
+        Ej.: Usuario: username 10, Contraseña: password 10. Caso contrario no se podrá loguear.
+      </code>
+    </p>
+    <p>
+      <button class="btn btn-primary btn-rounded" type="submit">Iniciar sesión</button>
+    </p>
+  </form>
+</div>
